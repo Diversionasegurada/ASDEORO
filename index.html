@@ -6,7 +6,6 @@
   <title>AS DE ORO – Volvimos</title>
   <meta name="description" content="Volvimos AS DE ORO. Contactanos por WhatsApp y obtené un bono del 25%." />
 
-  <!-- Open Graph para vistas previas en WhatsApp/FB -->
   <meta property="og:title" content="VOLVIMOS • AS DE ORO" />
   <meta property="og:description" content="Volvé con nosotros y obtené un bono del 25%." />
   <meta property="og:image" content="Portada_asdeoro.png" />
@@ -72,19 +71,13 @@
     }
     .sub{ font-size: clamp(1rem, 2.7vw, 1.35rem); color:var(--muted); margin: 0 0 22px 0; text-shadow: 0 10px 24px rgba(0,0,0,.45); }
     .card{ margin-top: 16px; background: var(--card); backdrop-filter: var(--blur); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding: clamp(14px, 3vw, 22px); box-shadow: 0 18px 40px rgba(0,0,0,.45); }
-    .nums{ display:grid; gap:14px; grid-template-columns: 1fr; }
-    .row{ display:flex; align-items:center; justify-content:space-between; gap:12px; background: rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:12px 12px 12px 14px; }
-    .row p{ margin:0; font-size:1rem; color:var(--muted); }
-    .row strong{ color:#fff; letter-spacing:.3px; }
-    .cta{ display:flex; flex-wrap:wrap; gap:12px; margin-top:10px; }
+    .cta{ display:flex; flex-direction:column; gap:16px; margin-top:10px; }
     .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.6rem; padding:14px 18px; border-radius:12px; font-weight:700; text-decoration:none; color:#0b1b12; background:var(--wa); transition:transform .04s ease, box-shadow .2s ease, background .2s ease; box-shadow: 0 10px 22px rgba(22, 163, 74, .25); border:1px solid rgba(0,0,0,.08); font-size:1rem; }
     .btn:hover{ background:var(--wa-hover); transform:translateY(-1px) }
     .btn.alt{ background: transparent; color:#e7fff5; border:1px solid rgba(231,255,245,.25); box-shadow:none; }
     .btn.alt:hover{ background: rgba(255,255,255,.08); }
     .mini{ margin-top:10px; font-size:.9rem; color:var(--muted); }
     footer{ margin-top:auto; padding: 20px 0 24px; text-align:center; color:#9a9a9a; font-size:.88rem; }
-    .wapp-ico{ width:1.1em; height:1.1em; display:inline-block; transform: translateY(1px); }
-    @media (min-width:700px){ .nums{ grid-template-columns: 1fr 1fr; } }
   </style>
 </head>
 <body>
@@ -97,20 +90,13 @@
       <p class="sub">Volvé con nosotros y <strong style="color:var(--gold)">obtené un bono del 25%</strong>.</p>
 
       <section class="card" aria-label="Contacto por WhatsApp">
-        <div class="nums">
-          <div class="row">
-            <p>📲 <strong>Número principal</strong> · +54 9 223 592-3212</p>
-            <div class="cta">
-              <a class="btn" href="https://wa.me/5492235923212?text=Quiero%20volver%20con%20mi%20BONO" target="_blank" rel="noopener">Contactar principal</a>
-            </div>
-          </div>
-
-          <div class="row">
-            <p>📲 <strong>Número respaldo</strong> · +54 9 223 543-1886</p>
-            <div class="cta">
-              <a class="btn alt" href="https://wa.me/5492235431886" target="_blank" rel="noopener">Contactar respaldo</a>
-            </div>
-          </div>
+        <div class="cta">
+          <a class="btn" href="https://wa.me/5492235923212?text=Quiero%20volver%20con%20mi%20BONO" target="_blank" rel="noopener">
+            📲 Contactar número principal
+          </a>
+          <a class="btn alt" href="https://wa.me/5492235431886" target="_blank" rel="noopener">
+            📲 Contactar número respaldo
+          </a>
         </div>
         <p class="mini">Atención 24/7 • Promos exclusivas por WhatsApp • Actualizá tus favoritos con este enlace</p>
       </section>
