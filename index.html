@@ -8,7 +8,7 @@
 
   <meta property="og:title" content="VOLVIMOS • AS DE ORO" />
   <meta property="og:description" content="Volvé con nosotros y obtené un bono del 25%." />
-  <meta property="og:image" content="Portada_asdeoro.jpeg" />
+  <meta property="og:image" content="Portada_asdeoro.jpg" />
   <meta property="og:type" content="website" />
 
   <style>
@@ -40,18 +40,34 @@
     .hero::before{
       content:"";
       position:absolute; inset:0;
-      background:url("Portada_asdeoro.jpeg") center/cover no-repeat;
-      filter:contrast(1.05) brightness(.9);
+      background:url("Portada_asdeoro.jpg") center/cover no-repeat;
+      filter:contrast(1) brightness(.8);
       z-index:-2;
     }
     .hero::after{
       content:"";
       position:absolute; inset:0;
-      background: radial-gradient(1200px 700px at 50% 20%, rgba(0,0,0,.0), rgba(0,0,0,.55) 60%, rgba(0,0,0,.78));
+      background: radial-gradient(1300px 800px at 50% 35%,
+              rgba(0,0,0,.05) 0%,
+              rgba(0,0,0,.55) 45%,
+              rgba(0,0,0,.82) 100%);
       z-index:-1;
     }
 
     .wrap{ width:min(940px, 92vw); margin-inline:auto; padding: clamp(16px, 3vw, 28px); }
+
+    .hero-copy{
+      max-width: 820px;
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      padding: clamp(14px, 3vw, 22px);
+      box-shadow: 0 20px 45px rgba(0,0,0,.45);
+      margin-bottom: 14px;
+      text-align:center;
+    }
+
     .badge{
       display:inline-flex; align-items:center; gap:.5rem;
       padding:.4rem .7rem; border-radius:999px;
@@ -67,9 +83,16 @@
       letter-spacing:.5px;
       background:linear-gradient(180deg, var(--gold) 0%, var(--gold-strong) 60%, #b88a2a 100%);
       -webkit-background-clip:text; background-clip:text; color:transparent;
-      text-shadow: 0 1px 0 #704d00, 0 12px 28px rgba(0,0,0,.45);
+      -webkit-text-stroke: 1px rgba(0,0,0,.35);
+      text-shadow: 0 2px 0 #6a4a00, 0 14px 28px rgba(0,0,0,.55);
     }
-    .sub{ font-size: clamp(1rem, 2.7vw, 1.35rem); color:var(--muted); margin: 0 0 22px 0; text-shadow: 0 10px 24px rgba(0,0,0,.45); }
+    .sub{
+      font-size: clamp(1rem, 2.7vw, 1.35rem);
+      color:#f1f1f1;
+      font-weight:600;
+      text-shadow: 0 2px 6px rgba(0,0,0,.55);
+    }
+
     .card{ margin-top: 16px; background: var(--card); backdrop-filter: var(--blur); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding: clamp(14px, 3vw, 22px); box-shadow: 0 18px 40px rgba(0,0,0,.45); }
     .cta{ display:flex; flex-direction:column; gap:16px; margin-top:10px; }
     .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.6rem; padding:14px 18px; border-radius:12px; font-weight:700; text-decoration:none; color:#0b1b12; background:var(--wa); transition:transform .04s ease, box-shadow .2s ease, background .2s ease; box-shadow: 0 10px 22px rgba(22, 163, 74, .25); border:1px solid rgba(0,0,0,.08); font-size:1rem; }
@@ -81,13 +104,13 @@
   </style>
 </head>
 <body>
-  <header class="wrap" aria-hidden="true"></header>
-
   <main class="hero">
     <div class="wrap">
-      <span class="badge">🎉 ¡VOLVIMOS!</span>
-      <h1>AS DE ORO</h1>
-      <p class="sub">Volvé con nosotros y <strong style="color:var(--gold)">obtené un bono del 25%</strong>.</p>
+      <div class="hero-copy">
+        <span class="badge">🎉 ¡VOLVIMOS!</span>
+        <h1>AS DE ORO</h1>
+        <p class="sub">Volvé con nosotros y <strong style="color:var(--gold)">obtené un bono del 25%</strong>.</p>
+      </div>
 
       <section class="card" aria-label="Contacto por WhatsApp">
         <div class="cta">
