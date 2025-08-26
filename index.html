@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AS DE ORO – Volvimos</title>
+  <meta name="description" content="Volvimos AS DE ORO. Contactanos por WhatsApp y obtené un bono del 25%." />
+
+  <!-- Open Graph para vistas previas en WhatsApp/FB -->
+  <meta property="og:title" content="VOLVIMOS • AS DE ORO" />
+  <meta property="og:description" content="Volvé con nosotros y obtené un bono del 25%." />
+  <meta property="og:image" content="Portada_asdeoro.png" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --gold:#ffd773;          
+      --gold-strong:#ffca3a;   
+      --text:#f5f5f5;
+      --muted:#d9d9e3;
+      --wa:#25D366;
+      --wa-hover:#1ebe5d;
+      --wa-alt:#128C7E;
+      --card:rgba(20,20,28,.72);
+      --blur: saturate(1.1) blur(6px);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      color:var(--text); background:var(--bg);
+      display:flex; min-height:100dvh; flex-direction:column;
+    }
+
+    .hero{
+      position:relative; isolation:isolate; overflow:hidden;
+      display:grid; place-items:center; min-height:85dvh;
+      background:#000;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:url("Portada_asdeoro.png") center/cover no-repeat;
+      filter:contrast(1.05) brightness(.9);
+      z-index:-2;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(1200px 700px at 50% 20%, rgba(0,0,0,.0), rgba(0,0,0,.55) 60%, rgba(0,0,0,.78));
+      z-index:-1;
+    }
+
+    .wrap{ width:min(940px, 92vw); margin-inline:auto; padding: clamp(16px, 3vw, 28px); }
+    .badge{
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.4rem .7rem; border-radius:999px;
+      font-weight:600; font-size:.9rem; letter-spacing:.3px;
+      color:#1b1b1b; background: linear-gradient(90deg, var(--gold), var(--gold-strong));
+      box-shadow: 0 8px 24px rgba(0,0,0,.35);
+      margin-bottom: 14px;
+    }
+    h1{
+      margin:0 0 10px 0;
+      font-size: clamp(2rem, 7vw, 4.2rem);
+      line-height:1.05; text-transform:uppercase;
+      letter-spacing:.5px;
+      background:linear-gradient(180deg, var(--gold) 0%, var(--gold-strong) 60%, #b88a2a 100%);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow: 0 1px 0 #704d00, 0 12px 28px rgba(0,0,0,.45);
+    }
+    .sub{ font-size: clamp(1rem, 2.7vw, 1.35rem); color:var(--muted); margin: 0 0 22px 0; text-shadow: 0 10px 24px rgba(0,0,0,.45); }
+    .card{ margin-top: 16px; background: var(--card); backdrop-filter: var(--blur); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding: clamp(14px, 3vw, 22px); box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+    .nums{ display:grid; gap:14px; grid-template-columns: 1fr; }
+    .row{ display:flex; align-items:center; justify-content:space-between; gap:12px; background: rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:12px 12px 12px 14px; }
+    .row p{ margin:0; font-size:1rem; color:var(--muted); }
+    .row strong{ color:#fff; letter-spacing:.3px; }
+    .cta{ display:flex; flex-wrap:wrap; gap:12px; margin-top:10px; }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.6rem; padding:14px 18px; border-radius:12px; font-weight:700; text-decoration:none; color:#0b1b12; background:var(--wa); transition:transform .04s ease, box-shadow .2s ease, background .2s ease; box-shadow: 0 10px 22px rgba(22, 163, 74, .25); border:1px solid rgba(0,0,0,.08); font-size:1rem; }
+    .btn:hover{ background:var(--wa-hover); transform:translateY(-1px) }
+    .btn.alt{ background: transparent; color:#e7fff5; border:1px solid rgba(231,255,245,.25); box-shadow:none; }
+    .btn.alt:hover{ background: rgba(255,255,255,.08); }
+    .mini{ margin-top:10px; font-size:.9rem; color:var(--muted); }
+    footer{ margin-top:auto; padding: 20px 0 24px; text-align:center; color:#9a9a9a; font-size:.88rem; }
+    .wapp-ico{ width:1.1em; height:1.1em; display:inline-block; transform: translateY(1px); }
+    @media (min-width:700px){ .nums{ grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="wrap" aria-hidden="true"></header>
+
+  <main class="hero">
+    <div class="wrap">
+      <span class="badge">🎉 ¡VOLVIMOS!</span>
+      <h1>AS DE ORO</h1>
+      <p class="sub">Volvé con nosotros y <strong style="color:var(--gold)">obtené un bono del 25%</strong>.</p>
+
+      <section class="card" aria-label="Contacto por WhatsApp">
+        <div class="nums">
+          <div class="row">
+            <p>📲 <strong>Número principal</strong> · +54 9 223 592-3212</p>
+            <div class="cta">
+              <a class="btn" href="https://wa.me/5492235923212?text=Quiero%20volver%20con%20mi%20BONO" target="_blank" rel="noopener">Contactar principal</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <p>📲 <strong>Número respaldo</strong> · +54 9 223 543-1886</p>
+            <div class="cta">
+              <a class="btn alt" href="https://wa.me/5492235431886" target="_blank" rel="noopener">Contactar respaldo</a>
+            </div>
+          </div>
+        </div>
+        <p class="mini">Atención 24/7 • Promos exclusivas por WhatsApp • Actualizá tus favoritos con este enlace</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="y"></span> AS DE ORO · Canal oficial de contacto
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
